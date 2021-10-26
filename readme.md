@@ -1,14 +1,14 @@
-Create project 
+## Create project ## 
 composer create-project --prefer-dist laravel/laravel school "5.8.*"
 
-###cmd create migrations
+### cmd create migrations
 ```php artisan make:migration create_schools_table
 php artisan make:migration create_class_rooms_table
 php artisan make:migration create_students_table
 php artisan make:migration create_student_class_rooms_table
 ```
 
-###cmd models
+### cmd models
 ```php artisan make:model model/School
 php artisan make:model model/ClassRoom
 php artisan make:model model/Student
@@ -16,19 +16,19 @@ php artisan make:model model/StudentClassRoom
 ```
 
 
-###cmd controller
+### cmd controller
 ```php artisan make:controller Api/SchoolController --resource           
 php artisan make:controller Api/StudentController --resource
 php artisan make:controller Api/ClassRoomController --resource
 php artisan make:controller Api/StudentClassRoomController --resource
 ```
 
-###cmd seeder
+### cmd seeder
 php artisan db:seed
 
 
 
-##Run project
+## Run project
 
 ```composer install
 php artisan serve
@@ -36,9 +36,9 @@ localhost:8000/api/
 ```
 
 
-##Teste fetch Schools
+## Teste fetch Schools
 
-###get
+### get
 ```var requestOptions = {
   method: 'GET',
   redirect: 'follow'
@@ -51,7 +51,7 @@ fetch("http://localhost:8000/api/schools", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###post
+### post
 ```var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
@@ -74,7 +74,7 @@ fetch("http://localhost:8000/api/schools/create", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###del
+### del
 ```var requestOptions = {
   method: 'DELETE',
   redirect: 'follow'
@@ -87,7 +87,7 @@ fetch("http://localhost:8000/api/schools/delete/6", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###update
+### update
 
 ```var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
@@ -124,7 +124,7 @@ fetch("http://localhost:8000/api/schools/5", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###search name
+### search name
 ```var requestOptions = {
   method: 'GET',
   redirect: 'follow'
@@ -140,9 +140,9 @@ fetch("http://localhost:8000/api/schools/search/sant", requestOptions)
 
 
 
-##Teste fetch Students
+## Teste fetch Students
 
-###get
+### get
 ```var requestOptions = {
   method: 'GET',
   redirect: 'follow'
@@ -155,7 +155,7 @@ fetch("http://localhost:8000/api/students", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###post
+### post
 ```var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
@@ -181,7 +181,7 @@ fetch("http://localhost:8000/api/students/create", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###del
+### del
 ```var requestOptions = {
   method: 'DELETE',
   redirect: 'follow'
@@ -194,7 +194,7 @@ fetch("http://localhost:8000/api/students/delete/2", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###update
+### update
 ```var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
@@ -220,7 +220,7 @@ fetch("http://localhost:8000/api/students/update/1", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###find id
+### find id
 ```var requestOptions = {
   method: 'GET',
   redirect: 'follow'
@@ -233,7 +233,7 @@ fetch("http://localhost:8000/api/students/3", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###search name
+### search name
 ```var requestOptions = {
   method: 'GET',
   redirect: 'follow'
@@ -248,7 +248,7 @@ fetch("http://localhost:8000/api/students/search/gui", requestOptions)
 -----------------------------------------------------------------
 
 
-##Teste fetch Classes
+## Teste fetch Classes
 
 ###get
 ```var requestOptions = {
@@ -263,7 +263,7 @@ fetch("http://localhost:8000/api/classes", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###post
+### post
 ```var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
@@ -289,7 +289,7 @@ fetch("http://localhost:8000/api/classes/create", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###del
+### del
 ```var requestOptions = {
   method: 'DELETE',
   redirect: 'follow'
@@ -302,7 +302,7 @@ fetch("http://localhost:8000/api/classes/delete/4", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###update
+### update
 ```var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
@@ -328,7 +328,7 @@ fetch("http://localhost:8000/api/classes/update/1", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###find id
+### find id
 ```var requestOptions = {
   method: 'GET',
   redirect: 'follow'
@@ -341,7 +341,7 @@ fetch("http://localhost:8000/api/classes/3", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###search year
+### search year
 ```var requestOptions = {
   method: 'GET',
   redirect: 'follow'
@@ -356,9 +356,9 @@ fetch("http://localhost:8000/api/classes/search/2020", requestOptions)
 -----------------------------------------------------------------
 
 
-##Teste fetch Classes
+## Teste fetch Classes
 
-###get
+### get
 ```var requestOptions = {
   method: 'GET',
   redirect: 'follow'
@@ -371,7 +371,7 @@ fetch("http://localhost:8000/api/class_student", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###post
+### post
 ```var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
@@ -394,7 +394,7 @@ fetch("http://localhost:8000/api/class_student/create", requestOptions)
 ```
 -----------------------------------------------------------------
 
-###del
+### del
 ```var requestOptions = {
   method: 'DELETE',
   redirect: 'follow'
@@ -408,7 +408,7 @@ fetch("http://localhost:8000/api/class_student/delete/4", requestOptions)
 -----------------------------------------------------------------
 
 
-###up
+### up
 ```var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
@@ -432,7 +432,7 @@ fetch("http://localhost:8000/api/class_student/update/5", requestOptions)
 -----------------------------------------------------------------
 
 
-###find id
+### find id
 ```var requestOptions = {
   method: 'GET',
   redirect: 'follow'
